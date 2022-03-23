@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+h1 {
+	font-size: 3.5rem;
+	font-weight: 700;
+	line-height: 3rem;
+	color: white;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1;
+	color: white;
+}
+
+h3 {
+	font-size: 1.75rem;
+	font-weight: 700;
+	line-height: 1;
+	color: white;
+}
+
+@media (max-width: 600px) {
+	h3 {
+		font-size: 1.5rem;
+	}
+}
+
+h4 {
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+h5 {
+	font-size: 0.75rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: #1e202a;
+	color: #8b97c6;
+	font-size: 0.75rem;
+	overflow-x: hidden;
+}
+
+/* Utilities Class */
+.container {
+	width: 85%;
+	max-width: 1110px;
+	margin: 0 auto;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #252a41;
+	border-radius: 0.5em;
+	cursor: pointer;
+	position: relative;
+}
+.card:hover {
+	background-color: #333a55;
+}
+
+.arrow-image {
+	width: 8px;
+	height: 4px;
+}
+
+/* Component CSS */
+
+main {
+	width: 100%;
+	padding: 2.25em 0 4.6875em 0;
+}
+
+/* Top Background Pattern */
+.top-bg {
+	width: 100%;
+	height: 244px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #1f212e;
+	border-bottom-left-radius: 1.5em;
+	border-bottom-right-radius: 1.5em;
+	z-index: -10;
+}
+
+/* Header Section */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .app-title > * + * {
+	margin-top: 0.5rem;
+}
+
+.header .toggle {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+@media (max-width: 600px) {
+	.header {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.header .toggle {
+		width: 100%;
+		justify-content: space-between;
+		border-top: 1px solid #333a55;
+	}
+}
+
+/* Toggle Switch */
+.toggle__switch {
+	position: relative;
+	display: inline-block;
+	width: 3rem;
+	height: 1.5rem;
+}
+
+.toggle__switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.toggle__switch .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 2.125rem;
+	background: linear-gradient(to right, #378fe6, #3eda82);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.toggle__switch .slider::before {
+	position: absolute;
+	content: '';
+	height: 18px;
+	width: 18px;
+	left: 3px;
+	bottom: 3px;
+	border-radius: 50%;
+	background-color: #1f212e;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.toggle__switch input:checked + .slider {
+	background: #aeb3cb;
+}
+
+.toggle__switch input:checked + .slider::before {
+	-webkit-transform: translateX(24px);
+	-ms-transform: translateX(24px);
+	transform: translateX(24px);
+	background: #f1f3fa;
+}
+
+/* Stats Overview */
+.stats-overview {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 3.5rem;
+}
+
+.stats-overview .card {
+	padding: 0 3em;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.stats-overview .card > * + * {
+	margin-block: 0.5rem;
+}
+
+.stats-overview .card__heading {
+	display: flex;
+	align-items: center;
+	margin-top: 1.5rem;
+	margin-bottom: 1.25rem;
+}
+
+.stats-overview .card__heading > * {
+	margin-right: 0.5rem;
+}
+
+.stats-overview .card__body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 1rem;
+}
+
+.stats-overview .card__body > * + * {
+	margin-top: 0.5rem;
+}
+
+.stats-overview .card__body p {
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.35em;
+}
+
+.stats-overview .card__footer {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.stats-overview .card__footer .arrow-image {
+	margin-right: 0.25rem;
+}
+
+.stats-overview .card__footer p {
+	font-weight: 700;
+	color: #1db489;
+}
+
+.stats-overview .card:nth-of-type(4) .card__footer p {
+	color: #dc414c;
+}
+
+.stats-overview .card::before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.5em;
+	z-index: -10;
+}
+
+.stats-overview .card:nth-of-type(1)::before {
+	background: #198ff5;
+}
+
+.stats-overview .card:nth-of-type(2)::before {
+	background: #1ca0f2;
+}
+
+.stats-overview .card:nth-of-type(3)::before {
+	background: linear-gradient(to right, #fdc468, #df4996);
+}
+
+.stats-overview .card:nth-of-type(4)::before {
+	background: #c4032a;
+}
+
+/* Overview Today Section */
+.overview-today h3 {
+	font-size: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+.overview-today .grid-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 2rem;
+}
+
+.overview-today .grid-container .card {
+	padding: 1em 2em;
+}
+
+.overview-today .grid-container .card__heading,
+.overview-today .grid-container .card__body {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.overview-today .grid-container .card > * {
+	margin-block: 1em;
+}
+
+.overview-today .grid-container .card__stats {
+	display: flex;
+	align-items: center;
+	gap: 0.35em;
+}
+
+.overview-today .grid-container .card__stats p {
+	font-weight: 700;
+	color: #1db489;
+}
+
+.overview-today .grid-container .card:nth-of-type(2) .card__stats p,
+.overview-today .grid-container .card:nth-of-type(7) .card__stats p,
+.overview-today .grid-container .card:nth-of-type(8) .card__stats p {
+	color: #dc414c;
+}
+
+/* Light Theme */
+body.light-theme {
+	background-color: white;
+	color: #63687e;
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3 {
+	color: #1e202a;
+}
+
+body.light-theme .top-bg {
+	background-color: #f5f7ff;
+}
+
+@media (max-width: 600px) {
+	body.light-theme .header .toggle {
+		border-top: 1px solid #848bab;
+	}
+}
+
+body.light-theme .toggle__switch input:hover + .slider {
+	background: linear-gradient(to right, #378fe6, #3eda82);
+}
+
+body.light-theme .card {
+	background-color: #f0f2fa;
+}
+
+body.light-theme .card:hover {
+	background-color: #e1e4f0;
+}
+
+body.light-theme .overview-today h3 {
+	color: #63687e;
+}
+
+/*# sourceMappingURL=main.css.map */

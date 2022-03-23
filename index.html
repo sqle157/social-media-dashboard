@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/main.css" />
+
+		<title>Frontend Mentor | [Social Media Dashboard]</title>
+	</head>
+	<body>
+		<main>
+			<header class="top-bg"></header>
+			<div class="container">
+				<header class="header">
+					<div class="app-title">
+						<h3>Social Media Dashboard</h3>
+						<h5>Total Followers: 23,004</h5>
+					</div>
+					<div class="toggle">
+						<h5>Dark Mode</h5>
+						<label class="toggle__switch">
+							<input type="checkbox" class="toggle__btn" />
+							<span class="slider"></span>
+						</label>
+					</div>
+				</header>
+
+				<!-- First grid layout -->
+				<section class="stats-overview">
+					<!-- Facebook -->
+					<div class="card">
+						<div class="card__heading">
+							<img src="./images/icon-facebook.svg" alt="Facebook Icon" />
+							<p>@nathanf</p>
+						</div>
+						<div class="card__body">
+							<h1>1987</h1>
+							<p>Followers</p>
+						</div>
+						<div class="card__footer">
+							<img src="./images/icon-up.svg" alt="arrow up icon" class="arrow-image" />
+							<p>12 Today</p>
+						</div>
+					</div>
+
+					<!-- Twitter -->
+					<div class="card">
+						<div class="card__heading">
+							<img src="./images/icon-twitter.svg" alt="Twitter Icon" />
+							<p>@nathanf</p>
+						</div>
+						<div class="card__body">
+							<h1>1044</h1>
+							<p>Followers</p>
+						</div>
+						<div class="card__footer">
+							<img src="./images/icon-up.svg" alt="arrow up icon" class="arrow-image" />
+							<p>99 Today</p>
+						</div>
+					</div>
+
+					<!-- Instagram -->
+					<div class="card">
+						<div class="card__heading">
+							<img src="./images/icon-instagram.svg" alt="Instagram Icon" />
+							<p>@realnathanf</p>
+						</div>
+						<div class="card__body">
+							<h1>11k</h1>
+							<p>Followers</p>
+						</div>
+						<div class="card__footer">
+							<img src="./images/icon-up.svg" alt="arrow up icon" class="arrow-image" />
+							<p>1099 Today</p>
+						</div>
+					</div>
+
+					<!-- Youtube -->
+					<div class="card">
+						<div class="card__heading">
+							<img src="./images/icon-youtube.svg" alt="Youtube Icon" />
+							<p>Nathan F.</p>
+						</div>
+						<div class="card__body">
+							<h1>8239</h1>
+							<p>Subscribers</p>
+						</div>
+						<div class="card__footer">
+							<img src="./images/icon-down.svg" alt="arrow down icon" class="arrow-image" />
+							<p>144 Today</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Second grid layout -->
+				<section class="overview-today">
+					<h3>Overview - Today</h3>
+
+					<div class="grid-container">
+						<!-- FB Page View -->
+						<div class="card">
+							<div class="card__heading">
+								<h4>Page Views</h4>
+								<img src="./images/icon-facebook.svg" alt="Facebook Icon" />
+							</div>
+							<div class="card__body">
+								<h2>87</h2>
+								<div class="card__stats">
+									<img src="./images/icon-up.svg" alt="arrow up icon" class="arrow-image" />
+									<p>3%</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- FB Likes -->
+						<div class="card">
+							<div class="card__heading">
+								<h4>Likes</h4>
+								<img src="./images/icon-facebook.svg" alt="Facebook Icon" />
+							</div>
+							<div class="card__body">
+								<h2>52</h2>
+								<div class="card__stats">
+									<img
+										src="./images/icon-down.svg"
+										alt="arrow down icon"
+										class="arrow-image"
+									/>
+									<p>2%</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Insta Likes -->
+						<div class="card">
+							<div class="card__heading">
+								<h4>Likes</h4>
+								<img src="./images/icon-instagram.svg" alt="Instagram Icon" />
+							</div>
+							<div class="card__body">
+								<h2>5462</h2>
+								<div class="card__stats">
+									<img src="./images/icon-up.svg" alt="arrow up icon" class="arrow-image" />
+									<p>2257%</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Insta Profile Views -->
+						<div class="card">
+							<div class="card__heading">
+								<h4>Profile Views</h4>
+								<img src="./images/icon-instagram.svg" alt="Instagram Icon" />
+							</div>
+							<div class="card__body">
+								<h2>52k</h2>
+
+								<div class="card__stats">
+									<img src="./images/icon-up.svg" alt="arrow up icon" class="arrow-image" />
+									<p>1375%</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Twitter Retweets -->
+						<div class="card">
+							<div class="card__heading">
+								<h4>Retweets</h4>
+								<img src="./images/icon-twitter.svg" alt="Twitter Icon" />
+							</div>
+							<div class="card__body">
+								<h2>117</h2>
+								<div class="card__stats">
+									<img src="./images/icon-up.svg" alt="arrow up icon" class="arrow-image" />
+									<p>303%</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Twitter Likes -->
+						<div class="card">
+							<div class="card__heading">
+								<h4>Likes</h4>
+								<img src="./images/icon-twitter.svg" alt="Twitter Icon" />
+							</div>
+							<div class="card__body">
+								<h2>507</h2>
+								<div class="card__stats">
+									<img src="./images/icon-up.svg" alt="arrow up icon" class="arrow-image" />
+									<p>553%</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Youtube Likes -->
+						<div class="card">
+							<div class="card__heading">
+								<h4>Likes</h4>
+								<img src="./images/icon-youtube.svg" alt="Youtube Icon" />
+							</div>
+							<div class="card__body">
+								<h2>107</h2>
+
+								<div class="card__stats">
+									<img
+										src="./images/icon-down.svg"
+										alt="arrow down icon"
+										class="arrow-image"
+									/>
+									<p>19%</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Youtube Total Views -->
+						<div class="card">
+							<div class="card__heading">
+								<h4>Total Views</h4>
+								<img src="./images/icon-youtube.svg" alt="Youtube Icon" />
+							</div>
+							<div class="card__body">
+								<h2>1407</h2>
+
+								<div class="card__stats">
+									<img
+										src="./images/icon-down.svg"
+										alt="arrow down icon"
+										class="arrow-image"
+									/>
+									<p>12%</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+
+		<script src="./index.js"></script>
+	</body>
+</html>
