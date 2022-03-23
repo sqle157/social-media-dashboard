@@ -80,7 +80,7 @@ body {
 
 main {
   width: 100%;
-  padding: 2.25em 0 4.6875em 0;
+  padding-block: 2.5em;
 }
 
 .top-bg {
